@@ -1,2 +1,2 @@
 # my-nvim-config
-My neovim config
+1. Clone with directory name `nvim`
