@@ -1,4 +1,12 @@
 {
+  // phpactor settings
+  "phpactor.enable": true,
+  "phpactor.path": "/Users/rbellido/.config/nvim/autoload/plugged/phpactor/bin/phpactor",
+
+  // coc-emoji
+  "coc.source.emoji.filetypes": ["markdown"],
+  "coc.source.emoji.triggerCharacters": ["TRIGGERCHAR"],
+
   // explorer
   "explorer.width": 30,
   "explorer.icon.enableNerdfont": true,

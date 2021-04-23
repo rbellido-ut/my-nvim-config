@@ -45,4 +45,10 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'junegunn/fzf.vim'
     Plug 'airblade/vim-rooter'
 
+    " Phpactor
+    Plug 'phpactor/phpactor', {'for': 'php', 'tag': '*', 'do': 'composer install --no-dev -o'}
+
+    " Sneak
+    Plug 'justinmk/vim-sneak'
+
 call plug#end()
