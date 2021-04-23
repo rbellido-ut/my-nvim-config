@@ -51,4 +51,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Sneak
     Plug 'justinmk/vim-sneak'
 
+    " Startify for funs
+    Plug 'mhinz/vim-startify'
+
 call plug#end()
