@@ -57,4 +57,13 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " PHP refactoring plugin
     Plug 'adoy/vim-php-refactoring-toolbox'
 
+    " Track the engine.
+    Plug 'SirVer/ultisnips'
+
+    " Snippets are separated from the engine. Add this if you want them:
+    Plug 'honza/vim-snippets'
+
+    " Tagbar for viewing class class outline
+    Plug 'preservim/tagbar'
+
 call plug#end()
