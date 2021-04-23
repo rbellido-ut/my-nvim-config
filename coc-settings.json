@@ -3,6 +3,9 @@
   "phpactor.enable": true,
   "phpactor.path": "/Users/rbellido/.config/nvim/autoload/plugged/phpactor/bin/phpactor",
 
+  //snippets
+  "snippets.userSnippetsDirectory": "~/.config/nvim/snips",
+
   // coc-emoji
   "coc.source.emoji.filetypes": ["markdown"],
   "coc.source.emoji.triggerCharacters": ["TRIGGERCHAR"],
