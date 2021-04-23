@@ -54,4 +54,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Startify for funs
     Plug 'mhinz/vim-startify'
 
+    " PHP refactoring plugin
+    Plug 'adoy/vim-php-refactoring-toolbox'
+
 call plug#end()
