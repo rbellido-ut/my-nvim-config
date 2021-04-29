@@ -72,4 +72,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " floaterm
     Plug 'voldikss/vim-floaterm'
 
+    " zen mode
+    Plug 'junegunn/goyo.vim'
+
 call plug#end()
