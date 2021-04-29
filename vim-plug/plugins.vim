@@ -66,4 +66,10 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Tagbar for viewing class class outline
     Plug 'preservim/tagbar'
 
+    " kill buffer not window
+    Plug 'qpkorr/vim-bufkill'
+
+    " floaterm
+    Plug 'voldikss/vim-floaterm'
+
 call plug#end()

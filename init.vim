@@ -10,4 +10,6 @@ source $HOME/.config/nvim/plug-config/quickscope.vim
 source $HOME/.config/nvim/plug-config/sneak.vim
 source $HOME/.config/nvim/plug-config/tagbar.vim
 source $HOME/.config/nvim/plug-config/vim-snippets.vim
+source $HOME/.config/nvim/plug-config/vim-bufkill.vim
+source $HOME/.config/nvim/plug-config/floaterm.vim
 lua require'plug-colorizer'
