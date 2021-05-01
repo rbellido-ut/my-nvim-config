@@ -19,4 +19,5 @@ source $HOME/.config/nvim/plug-config/vim-bufkill.vim
 source $HOME/.config/nvim/plug-config/floaterm.vim
 source $HOME/.config/nvim/plug-config/goyo.vim
 source $HOME/.config/nvim/plug-config/start-screen.vim
+source $HOME/.config/nvim/plug-config/signify.vim
 lua require'plug-colorizer'
