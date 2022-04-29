@@ -23,9 +23,9 @@ lvim.lsp.templates_dir = join_paths(get_runtime_dir(), "after", "ftplugin")
 
 -- Themes / Colorscheme
 require('lualine').setup {
-  options = {
-    theme = 'everforest'
-  }
+    options = {
+        theme = 'everforest'
+    }
 }
 lvim.colorscheme = "everforest"
 
@@ -36,25 +36,25 @@ lvim.leader = "space"
 lvim.keys.normal_mode["<C-s>"] = ":w<cr>"
 lvim.keys.normal_mode["<S-x>"] = ":BufferClose<CR>"
 lvim.keys.normal_mode = {
-   -- Page down/up
-   ["[d"] = "<PageUp>",
-   ["]d"] = "<PageDown>",
+    -- Page down/up
+    ["[d"] = "<PageUp>",
+    ["]d"] = "<PageDown>",
 
-   -- Navigate buffers
-   ["<Tab>"] = ":bnext<CR>",
-   ["<S-Tab>"] = ":bprevious<CR>",
+    -- Navigate buffers
+    ["<Tab>"] = ":bnext<CR>",
+    ["<S-Tab>"] = ":bprevious<CR>",
 
-   -- use alt + hjkl to resize windows
-   ["<M-j>"] = ":resize -2<CR>",
-   ["<M-k>"] = ":resize +2<CR>",
-   ["<M-h>"] = ":vertical resize -2<CR>",
-   ["<M-l>"] = ":vertical resize +2<CR>",
+    -- use alt + hjkl to resize windows
+    ["<M-j>"] = ":resize -2<CR>",
+    ["<M-k>"] = ":resize +2<CR>",
+    ["<M-h>"] = ":vertical resize -2<CR>",
+    ["<M-l>"] = ":vertical resize +2<CR>",
 
-   -- use ctrl + hjkl to navigate windows
-   ["<C-h>"] = "<C-w>h",
-   ["<C-j>"] = "<C-w>j",
-   ["<C-k>"] = "<C-w>k",
-   ["<C-l>"] = "<C-w>l",
+    -- use ctrl + hjkl to navigate windows
+    ["<C-h>"] = "<C-w>h",
+    ["<C-j>"] = "<C-w>j",
+    ["<C-k>"] = "<C-w>k",
+    ["<C-l>"] = "<C-w>l",
 }
 
 -- unmap a default keymapping
@@ -83,18 +83,18 @@ lvim.keys.normal_mode = {
 -- Use which-key to add extra bindings with the leader-key prefix
 lvim.builtin.which_key.mappings["P"] = { "<cmd>Telescope projects<CR>", "Projects" }
 lvim.builtin.which_key.mappings["t"] = {
-  name = "+Trouble",
-  r = { "<cmd>Trouble lsp_references<cr>", "References" },
-  f = { "<cmd>Trouble lsp_definitions<cr>", "Definitions" },
-  d = { "<cmd>Trouble lsp_document_diagnostics<cr>", "Diagnostics" },
-  q = { "<cmd>Trouble quickfix<cr>", "QuickFix" },
-  l = { "<cmd>Trouble loclist<cr>", "LocationList" },
-  w = { "<cmd>Trouble lsp_workspace_diagnostics<cr>", "Diagnostics" },
+    name = "+Trouble",
+    r = { "<cmd>Trouble lsp_references<cr>", "References" },
+    f = { "<cmd>Trouble lsp_definitions<cr>", "Definitions" },
+    d = { "<cmd>Trouble lsp_document_diagnostics<cr>", "Diagnostics" },
+    q = { "<cmd>Trouble quickfix<cr>", "QuickFix" },
+    l = { "<cmd>Trouble loclist<cr>", "LocationList" },
+    w = { "<cmd>Trouble lsp_workspace_diagnostics<cr>", "Diagnostics" },
 }
 
 -- TODO: User Config for predefined plugins
 -- After changing plugin config exit and reopen LunarVim, Run :PackerInstall :PackerCompile
-lvim.builtin.dashboard.active = true
+-- lvim.builtin.builtin.alpha = true
 lvim.builtin.notify.active = true
 lvim.builtin.terminal.active = true
 lvim.builtin.nvimtree.setup.view.side = "left"
@@ -102,18 +102,19 @@ lvim.builtin.nvimtree.show_icons.git = 1
 
 -- if you don't want all the parsers change this to a table of the ones you want
 lvim.builtin.treesitter.ensure_installed = {
-  "bash",
-  "c",
-  "javascript",
-  "json",
-  "lua",
-  "php",
-  "python",
-  "typescript",
-  "css",
-  "rust",
-  "java",
-  "yaml",
+    "bash",
+    "c",
+    "javascript",
+    "json",
+    "lua",
+    "php",
+    "python",
+    "typescript",
+    "css",
+    "ruby",
+    "rust",
+    "java",
+    "yaml",
 }
 
 lvim.builtin.treesitter.ignore_install = { "haskell" }
@@ -145,83 +146,83 @@ lvim.lsp.automatic_servers_installation = false
 -- set a formatter, this will override the language server formatting capabilities (if it exists)
 local formatters = require "lvim.lsp.null-ls.formatters"
 formatters.setup {
-  { command = "black", filetypes = { "python" } },
-  { command = "isort", filetypes = { "python" } },
-  {
-    -- each formatter accepts a list of options identical to https://github.com/jose-elias-alvarez/null-ls.nvim/blob/main/doc/BUILTINS.md#Configuration
-    command = "prettier",
-    ---@usage arguments to pass to the formatter
-    -- these cannot contain whitespaces, options such as `--line-width 80` become either `{'--line-width', '80'}` or `{'--line-width=80'}`
-    extra_args = { "--print-with", "100" },
-    ---@usage specify which filetypes to enable. By default a providers will attach to all the filetypes it supports.
-    filetypes = { "typescript", "typescriptreact", "html", "json", "yaml", "markdown" },
-  },
-  {
-    command = "phpcsfixer",
-    filetypes = { "php" },
-    extra_args = { "--config=.php-cs-fixer.dist.php", "-v", "--stop-on-violation", "--using-cache"},
-  }
+    { command = "black", filetypes = { "python" } },
+    { command = "isort", filetypes = { "python" } },
+    {
+        -- each formatter accepts a list of options identical to https://github.com/jose-elias-alvarez/null-ls.nvim/blob/main/doc/BUILTINS.md#Configuration
+        command = "prettier",
+        ---@usage arguments to pass to the formatter
+        -- these cannot contain whitespaces, options such as `--line-width 80` become either `{'--line-width', '80'}` or `{'--line-width=80'}`
+        extra_args = { "--print-with", "100" },
+        ---@usage specify which filetypes to enable. By default a providers will attach to all the filetypes it supports.
+        filetypes = { "typescript", "typescriptreact", "html", "json", "yaml", "markdown" },
+    },
+    {
+        command = "phpcsfixer",
+        filetypes = { "php" },
+        extra_args = { "--config=.php-cs-fixer.dist.php", "-v", "--stop-on-violation", "--using-cache" },
+    }
 }
 
 -- set additional linters
-local linters = require "lvim.lsp.null-ls.linters"
-linters.setup {
-  { command = "flake8", filetypes = { "python" } },
-  {
-    -- each linter accepts a list of options identical to https://github.com/jose-elias-alvarez/null-ls.nvim/blob/main/doc/BUILTINS.md#Configuration
-    command = "shellcheck",
-    ---@usage arguments to pass to the formatter
-    -- these cannot contain whitespaces, options such as `--line-width 80` become either `{'--line-width', '80'}` or `{'--line-width=80'}`
-    extra_args = { "--severity", "warning" },
-  },
-  {
-    command = "codespell",
-    ---@usage specify which filetypes to enable. By default a providers will attach to all the filetypes it supports.
-    filetypes = { "javascript", "python" },
-  },
-}
+-- local linters = require "lvim.lsp.null-ls.linters"
+-- linters.setup {
+--     { command = "flake8", filetypes = { "python" } },
+--     {
+--         -- each linter accepts a list of options identical to https://github.com/jose-elias-alvarez/null-ls.nvim/blob/main/doc/BUILTINS.md#Configuration
+--         command = "shellcheck",
+--         ---@usage arguments to pass to the formatter
+--         -- these cannot contain whitespaces, options such as `--line-width 80` become either `{'--line-width', '80'}` or `{'--line-width=80'}`
+--         extra_args = { "--severity", "warning" },
+--     },
+--     {
+--         command = "codespell",
+--         ---@usage specify which filetypes to enable. By default a providers will attach to all the filetypes it supports.
+--         filetypes = { "javascript", "python" },
+--     },
+-- }
 
 -- Additional Plugins
 lvim.plugins = {
-  -- Themes
-  {"rmehri01/onenord.nvim", "rafamadriz/neon", "sainnhe/everforest"},
-  {
-    "folke/trouble.nvim",
-    cmd = "TroubleToggle",
-  },
-  {
-    'folke/lsp-colors.nvim'
-  },
-  {"jeffkreeftmeijer/vim-numbertoggle"},
-  {
-    "sindrets/diffview.nvim",
-    event = "BufRead",
-  },
-  {
-    "ray-x/lsp_signature.nvim",
-    event = "BufRead",
-    config = function()
-      require "lsp_signature".setup()
-    end
-  },
-  {
-    "tpope/vim-surround",
-    keys = {"c", "d", "y"}
-  },
-  { "unblevable/quick-scope" },
-  {
-   "ethanholz/nvim-lastplace",
-		event = "BufRead",
-		config = function()
-			require("nvim-lastplace").setup({
-				lastplace_ignore_buftype = { "quickfix", "nofile", "help" },
-				lastplace_ignore_filetype = {
-					"gitcommit", "gitrebase", "svn", "hgcommit",
-				},
-				lastplace_open_folds = true,
-			})
-		end,
-	},
+    -- Themes
+    { "rmehri01/onenord.nvim", "rafamadriz/neon", "sainnhe/everforest" },
+    {
+        "folke/trouble.nvim",
+        cmd = "TroubleToggle",
+    },
+    {
+        'folke/lsp-colors.nvim'
+    },
+    { "jeffkreeftmeijer/vim-numbertoggle" },
+    {
+        "sindrets/diffview.nvim",
+        event = "BufRead",
+    },
+    {
+        "ray-x/lsp_signature.nvim",
+        event = "BufRead",
+        config = function()
+            require "lsp_signature".setup()
+        end
+    },
+    {
+        "tpope/vim-surround",
+        keys = { "c", "d", "y" }
+    },
+    { "unblevable/quick-scope" },
+    {
+        "ethanholz/nvim-lastplace",
+        event = "BufRead",
+        config = function()
+            require("nvim-lastplace").setup({
+                lastplace_ignore_buftype = { "quickfix", "nofile", "help" },
+                lastplace_ignore_filetype = {
+                    "gitcommit", "gitrebase", "svn", "hgcommit",
+                },
+                lastplace_open_folds = true,
+            })
+        end,
+    },
 }
 
 
