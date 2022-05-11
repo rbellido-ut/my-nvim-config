@@ -23,7 +23,10 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " End THEMES
 
     " Stable version of coc (Intellisense)
-    Plug 'neoclide/coc.nvim', {'branch': 'release'}
+    " Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
+    Plug 'neovim/nvim-lspconfig'
+    Plug 'hrsh7th/nvim-compe'
 
     " Airline status
     Plug 'vim-airline/vim-airline'
