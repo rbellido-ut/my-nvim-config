@@ -19,6 +19,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " OneDark theme
     Plug 'joshdick/onedark.vim'
     Plug 'chriskempson/base16-vim'
+    Plug 'rafamadriz/neon'
     " End THEMES
 
     " Stable version of coc (Intellisense)
@@ -32,7 +33,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'kevinhwang91/rnvimr', {'do': 'make sync'}
 
     " Which key plugin
-    Plug 'liuchengxu/vim-which-key'
+    Plug 'folke/which-key.nvim'
 
     " Vim commentary plugin
     Plug 'tpope/vim-commentary'
@@ -49,7 +50,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'airblade/vim-rooter'
 
     " Phpactor
-    Plug 'phpactor/phpactor', {'for': 'php', 'tag': '*', 'do': 'composer install --no-dev -o'}
+    " Plug 'phpactor/phpactor', {'for': 'php', 'tag': '*', 'do': 'composer install --no-dev -o'}
 
     " Sneak
     Plug 'justinmk/vim-sneak'
@@ -58,7 +59,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'mhinz/vim-startify'
 
     " PHP refactoring plugin
-    Plug 'adoy/vim-php-refactoring-toolbox'
+    " Plug 'adoy/vim-php-refactoring-toolbox'
 
     " Track the engine.
     Plug 'SirVer/ultisnips'
@@ -79,12 +80,15 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'junegunn/goyo.vim'
 
     " phpcsfixer
-    Plug 'stephpy/vim-php-cs-fixer'
+    " Plug 'stephpy/vim-php-cs-fixer'
 
     " Git integration
     Plug 'mhinz/vim-signify'
     Plug 'tpope/vim-fugitive'
     Plug 'tpope/vim-rhubarb'
     Plug 'junegunn/gv.vim'
+
+    " Vim surround
+    Plug 'tpope/vim-surround'
 
 call plug#end()

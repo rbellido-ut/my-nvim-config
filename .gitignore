@@ -1,2 +1,5 @@
 autoload/
 sessions
+luacache_chunks
+luacache_modpaths
+lvim.shada

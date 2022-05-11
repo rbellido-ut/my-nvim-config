@@ -11,13 +11,14 @@ an executable
 -- General settings
 vim.opt.cursorline = true
 vim.opt.scrolloff = 8
-vim.opt.shiftwidth = 4
+vim.opt.shiftwidth = 2
 vim.opt.sidescrolloff = 8
-vim.opt.tabstop = 4
+vim.opt.tabstop = 2
+vim.opt.expandtab = true
 vim.opt.timeoutlen = 300
 vim.opt.colorcolumn = "99999" -- fixes indentline for now
 lvim.log.level = "warn"
-lvim.format_on_save = true
+lvim.format_on_save = false
 lvim.lsp.templates_dir = join_paths(get_runtime_dir(), "after", "ftplugin")
 
 
@@ -94,7 +95,7 @@ lvim.builtin.which_key.mappings["t"] = {
 
 -- TODO: User Config for predefined plugins
 -- After changing plugin config exit and reopen LunarVim, Run :PackerInstall :PackerCompile
--- lvim.builtin.builtin.alpha = true
+lvim.builtin.alpha.active = true
 lvim.builtin.notify.active = true
 lvim.builtin.terminal.active = true
 lvim.builtin.nvimtree.setup.view.side = "left"

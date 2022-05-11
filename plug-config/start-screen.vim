@@ -11,8 +11,8 @@ let g:startify_lists = [
 
 " bookmarks
 let g:startify_bookmarks = [
-            \ { 'p': '~/projects' },
-            \ { 'g': '~/projects/golftracker' },
+            \ { 'p': '~/development' },
+            \ { 'o': '~/development/orders' },
             \ { 'i': '~/.config/nvim/init.vim' },
             \ { 'z': '~/.zshrc' },
             \ ]
