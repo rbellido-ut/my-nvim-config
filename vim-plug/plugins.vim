@@ -25,6 +25,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Stable version of coc (Intellisense)
     " Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
+    " Native LSP
+    Plug 'williamboman/nvim-lsp-installer'
     Plug 'neovim/nvim-lspconfig'
     Plug 'hrsh7th/nvim-compe'
 
