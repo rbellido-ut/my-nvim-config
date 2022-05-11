@@ -38,6 +38,9 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'hrsh7th/cmp-cmdline'
     Plug 'hrsh7th/nvim-cmp'
 
+    " ale for ruby & standardrb
+    Plug 'dense-analysis/ale'
+
     " Airline status
     Plug 'vim-airline/vim-airline'
     Plug 'vim-airline/vim-airline-themes'

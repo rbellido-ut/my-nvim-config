@@ -12,6 +12,7 @@ source $HOME/.config/nvim/keys/which-key.vim
 source $HOME/.config/nvim/lsp/general.lua
 source $HOME/.config/nvim/lsp/solargraph.lua
 
+source $HOME/.config/nvim/plug-config/ale.vim
 source $HOME/.config/nvim/plug-config/rnvimr.vim
 source $HOME/.config/nvim/plug-config/quickscope.vim
 source $HOME/.config/nvim/plug-config/sneak.vim
