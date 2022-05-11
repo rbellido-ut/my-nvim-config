@@ -76,6 +76,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 
     " Track the engine.
     Plug 'SirVer/ultisnips'
+    Plug 'quangnguyen30192/cmp-nvim-ultisnips'
 
     " Snippets are separated from the engine. Add this if you want them:
     Plug 'honza/vim-snippets'
