@@ -40,48 +40,10 @@ end
 local servers = { "solargraph" }
 for _, lsp in ipairs(servers) do
   nvim_lsp[lsp].setup {
-	on_attach = on_attach,
-	flags = {
-	  debounce_text_changes = 150,
-	}
+    on_attach = on_attach,
+    flags = {
+      debounce_text_changes = 150,
+    },
+    max_files = 0,
   }
 end
-
--- some more solargraph specific config
-
-local util = require 'lspconfig.util'
-
-local bin_name = 'solargraph'
-local cmd = { bin_name, 'stdio' }
-
-if vim.fn.has 'win32' == 1 then
-  cmd = { 'cmd.exe', '/C', bin_name, 'stdio' }
-end
-
-return {
-  default_config = {
-    cmd = cmd,
-    settings = {
-      solargraph = {
-        diagnostics = true,
-      },
-    },
-    init_options = { formatting = true },
-    filetypes = { 'ruby' },
-    root_dir = util.root_pattern('Gemfile', '.git'),
-    max_files = 0,
-  },
-  docs = {
-    description = [[
-https://solargraph.org/
-solargraph, a language server for Ruby
-You can install solargraph via gem install.
-```sh
-gem install --user-install solargraph
-```
-    ]],
-    default_config = {
-      root_dir = [[root_pattern("Gemfile", ".git")]],
-    },
-  },
-}

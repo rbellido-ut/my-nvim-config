@@ -13,8 +13,6 @@ source $HOME/.config/nvim/lsp/general.lua
 source $HOME/.config/nvim/lsp/solargraph.lua
 
 source $HOME/.config/nvim/plug-config/rnvimr.vim
-source $HOME/.config/nvim/plug-config/compe-config.lua
-" source $HOME/.config/nvim/plug-config/coc.vim
 source $HOME/.config/nvim/plug-config/quickscope.vim
 source $HOME/.config/nvim/plug-config/sneak.vim
 source $HOME/.config/nvim/plug-config/tagbar.vim

@@ -8,6 +8,11 @@ nnoremap <M-k>    :resize +2<CR>
 nnoremap <M-h>    :vertical resize -2<CR>
 nnoremap <M-l>    :vertical resize +2<CR>
 
+" NERDTree
+nnoremap <Leader>e :NERDTreeFocus<CR>
+nnoremap <C-n> :NERDTree<CR>
+nnoremap <C-t> :NERDTreeToggle<CR>
+
 " I hate escape more than anything else
 inoremap jj <Esc>
 inoremap jj <Esc>
