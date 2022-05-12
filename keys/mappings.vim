@@ -8,10 +8,8 @@ nnoremap <M-k>    :resize +2<CR>
 nnoremap <M-h>    :vertical resize -2<CR>
 nnoremap <M-l>    :vertical resize +2<CR>
 
-" NERDTree
-nnoremap <Leader>e :NERDTreeFocus<CR>
-nnoremap <C-n> :NERDTree<CR>
-nnoremap <C-t> :NERDTreeToggle<CR>
+" CHADTree
+nnoremap <Leader>e <cmd>CHADopen<CR>
 
 " I hate escape more than anything else
 inoremap jj <Esc>
@@ -71,7 +69,7 @@ nnoremap <leader>g :Rg<CR>
 nnoremap <leader>t :Tags<CR>
 nnoremap <leader>m :Marks<CR>
 nnoremap <leader>h :nohlsearch<CR>
-
+nnoremap <leader>f <cmd>:ALEFix<CR>
 
 let g:fzf_tags_command = 'ctags -R'
 " Border color

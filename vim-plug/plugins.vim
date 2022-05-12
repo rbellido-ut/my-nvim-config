@@ -10,14 +10,10 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 
     " Better Syntax Support
     Plug 'sheerun/vim-polyglot'
-    " File Explorer
-    Plug 'scrooloose/NERDTree'
-    " NERDTree devicons
-    Plug 'ryanoasis/vim-devicons'
-    " NERDTree git plugin
-    Plug 'Xuyuanp/nerdtree-git-plugin'
     " Auto pairs for '(' '[' '{'
     Plug 'jiangmiao/auto-pairs'
+
+    Plug 'ms-jpq/chadtree', {'branch': 'chad', 'do': 'python3 -m chadtree deps'}
 
     " THEMES
     " OneDark theme
@@ -32,12 +28,20 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Native LSP
     Plug 'williamboman/nvim-lsp-installer'
     Plug 'neovim/nvim-lspconfig'
-    Plug 'hrsh7th/cmp-nvim-lsp'
-    Plug 'hrsh7th/cmp-buffer'
-    Plug 'hrsh7th/cmp-path'
-    Plug 'hrsh7th/cmp-cmdline'
-    Plug 'hrsh7th/nvim-cmp'
-
+    " Plug 'hrsh7th/cmp-nvim-lsp'
+    " Plug 'hrsh7th/cmp-buffer'
+    " Plug 'hrsh7th/cmp-path'
+    " Plug 'hrsh7th/cmp-cmdline'
+    " Plug 'hrsh7th/nvim-cmp'
+    
+    " COQ - code completion
+    Plug 'ms-jpq/coq_nvim', {'branch': 'coq'}
+    " 9000+ Snippets
+    Plug 'ms-jpq/coq.artifacts', {'branch': 'artifacts'}
+    " lua & third party sources -- See https://github.com/ms-jpq/coq.thirdparty
+    " Need to **configure separately**
+    Plug 'ms-jpq/coq.thirdparty', {'branch': '3p'}
+    
     " ale for ruby & standardrb
     Plug 'dense-analysis/ale'
 
@@ -79,7 +83,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 
     " Track the engine.
     Plug 'SirVer/ultisnips'
-    Plug 'quangnguyen30192/cmp-nvim-ultisnips'
+    " Plug 'quangnguyen30192/cmp-nvim-ultisnips'
 
     " Snippets are separated from the engine. Add this if you want them:
     Plug 'honza/vim-snippets'
