@@ -20,6 +20,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'joshdick/onedark.vim'
     Plug 'chriskempson/base16-vim'
     Plug 'rafamadriz/neon'
+    Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
     " End THEMES
 
     " Stable version of coc (Intellisense)
@@ -111,5 +112,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 
     " Vim surround
     Plug 'tpope/vim-surround'
+
+    " Vim repeat for repeating plugin commands
+    Plug 'tpope/vim-repeat'
 
 call plug#end()

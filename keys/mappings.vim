@@ -63,13 +63,23 @@ let g:fzf_action = {
 " explicitly bind the keys to down and up in your $FZF_DEFAULT_OPTS.
 let g:fzf_history_dir = '~/.local/share/fzf-history'
 
+" FZF searching
 map <C-f> :Files<CR>
 map <leader>b :Buffers<CR>
+nnoremap <leader>c :Commands<CR>
 nnoremap <leader>g :Rg<CR>
+nnoremap <leader>gg :GGrep<CR>
+nnoremap <leader>gag :Ag<CR>
+nnoremap <leader>gbl :BLines<CR>
 nnoremap <leader>t :Tags<CR>
 nnoremap <leader>m :Marks<CR>
+
 nnoremap <leader>h :nohlsearch<CR>
 nnoremap <leader>f <cmd>:ALEFix<CR>
+
+" Close the current buffer and move to the previous one
+" This replicates the idea of closing a tab
+nnoremap <leader>bq :<c-u>bp <bar> bd #<cr>
 
 let g:fzf_tags_command = 'ctags -R'
 " Border color
@@ -77,7 +87,6 @@ let g:fzf_layout = {'up':'~90%', 'window': { 'width': 0.8, 'height': 0.8,'yoffse
 
 let $FZF_DEFAULT_OPTS = '--layout=reverse --info=inline'
 let $FZF_DEFAULT_COMMAND="rg --files --hidden"
-
 
 " Customize fzf colors to match your color scheme
 let g:fzf_colors =
@@ -95,10 +104,9 @@ let g:fzf_colors =
   \ 'spinner': ['fg', 'Label'],
   \ 'header':  ['fg', 'Comment'] }
 
-"Get Files
+" Get Files
 command! -bang -nargs=? -complete=dir Files
     \ call fzf#vim#files(<q-args>, fzf#vim#with_preview({'options': ['--layout=reverse', '--info=inline']}), <bang>0)
-
 
 " Get text in files with Rg
 command! -bang -nargs=* Rg
