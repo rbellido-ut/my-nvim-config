@@ -16,11 +16,11 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'ms-jpq/chadtree', {'branch': 'chad', 'do': 'python3 -m chadtree deps'}
 
     " THEMES
-    " OneDark theme
     Plug 'joshdick/onedark.vim'
     Plug 'chriskempson/base16-vim'
     Plug 'rafamadriz/neon'
     Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
+    Plug 'EdenEast/nightfox.nvim'
     " End THEMES
 
     " Stable version of coc (Intellisense)
