@@ -21,6 +21,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'rafamadriz/neon'
     Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
     Plug 'EdenEast/nightfox.nvim'
+    Plug 'sainnhe/everforest'
     " End THEMES
 
     " Stable version of coc (Intellisense)
