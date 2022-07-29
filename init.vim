@@ -15,18 +15,14 @@ source $HOME/.config/nvim/themes/airline.vim
 source $HOME/.config/nvim/keys/mappings.vim
 source $HOME/.config/nvim/keys/which-key.vim
 
-source $HOME/.config/nvim/lsp/general.lua
-source $HOME/.config/nvim/lsp/solargraph.lua
+" Include all lsp config
+for f in split(glob($HOME . "/.config/nvim/lsp/*.vim"), '\n')
+  exe 'source' f
+endfor
 
-source $HOME/.config/nvim/plug-config/ale.vim
-source $HOME/.config/nvim/plug-config/rnvimr.vim
-source $HOME/.config/nvim/plug-config/quickscope.vim
-source $HOME/.config/nvim/plug-config/sneak.vim
-source $HOME/.config/nvim/plug-config/tagbar.vim
-source $HOME/.config/nvim/plug-config/vim-snippets.vim
-source $HOME/.config/nvim/plug-config/vim-bufkill.vim
-source $HOME/.config/nvim/plug-config/floaterm.vim
-source $HOME/.config/nvim/plug-config/goyo.vim
-source $HOME/.config/nvim/plug-config/start-screen.vim
-source $HOME/.config/nvim/plug-config/signify.vim
+" Include all plugin config
+for f in split(glob($HOME . "/.config/nvim/plug-config/*.vim"), '\n')
+  exe 'source' f
+endfor
+
 lua require'plug-colorizer'
