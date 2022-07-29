@@ -1,4 +1,5 @@
-require("nvim-lsp-installer").setup {}
+require("mason").setup()
 
-local lsp = require "lspconfig"
-local coq = require "coq"
+require("mason-lspconfig").setup({
+  ensure_installed = { "solargraph" }
+})

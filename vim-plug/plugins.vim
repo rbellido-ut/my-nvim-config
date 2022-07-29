@@ -28,13 +28,9 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
     " Native LSP
-    Plug 'williamboman/nvim-lsp-installer'
+    Plug 'williamboman/mason.nvim'
+    Plug 'williamboman/mason-lspconfig.nvim'
     Plug 'neovim/nvim-lspconfig'
-    " Plug 'hrsh7th/cmp-nvim-lsp'
-    " Plug 'hrsh7th/cmp-buffer'
-    " Plug 'hrsh7th/cmp-path'
-    " Plug 'hrsh7th/cmp-cmdline'
-    " Plug 'hrsh7th/nvim-cmp'
     
     " COQ - code completion
     Plug 'ms-jpq/coq_nvim', {'branch': 'coq'}

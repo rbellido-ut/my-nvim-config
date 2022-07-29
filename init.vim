@@ -16,7 +16,7 @@ source $HOME/.config/nvim/keys/mappings.vim
 source $HOME/.config/nvim/keys/which-key.vim
 
 " Include all lsp config
-for f in split(glob($HOME . "/.config/nvim/lsp/*.vim"), '\n')
+for f in split(glob($HOME . "/.config/nvim/lsp/*.lua"), '\n')
   exe 'source' f
 endfor
 
