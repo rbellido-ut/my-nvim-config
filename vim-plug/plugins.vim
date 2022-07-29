@@ -117,4 +117,9 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Vim repeat for repeating plugin commands
     Plug 'tpope/vim-repeat'
 
+    " Plugin to add more text objects
+    Plug 'wellle/targets.vim'
+
+
+
 call plug#end()
