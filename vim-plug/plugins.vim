@@ -22,6 +22,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
     Plug 'EdenEast/nightfox.nvim'
     Plug 'sainnhe/everforest'
+    Plug 'ajmwagar/vim-deus'
     " End THEMES
 
     " Native LSP
