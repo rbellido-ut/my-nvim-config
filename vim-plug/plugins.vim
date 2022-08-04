@@ -24,9 +24,6 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'sainnhe/everforest'
     " End THEMES
 
-    " Stable version of coc (Intellisense)
-    " Plug 'neoclide/coc.nvim', {'branch': 'release'}
-
     " Native LSP
     Plug 'williamboman/mason.nvim'
     Plug 'williamboman/mason-lspconfig.nvim'
@@ -40,14 +37,11 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Need to **configure separately**
     Plug 'ms-jpq/coq.thirdparty', {'branch': '3p'}
     
-    " ale for ruby & standardrb
-    Plug 'dense-analysis/ale'
-
     " Airline status
     Plug 'vim-airline/vim-airline'
     Plug 'vim-airline/vim-airline-themes'
     
-    " Ranger integraiont w/ nvim
+    " Ranger integration w/ nvim
     Plug 'kevinhwang91/rnvimr', {'do': 'make sync'}
 
     " Which key plugin
@@ -67,21 +61,14 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'junegunn/fzf.vim'
     Plug 'airblade/vim-rooter'
 
-    " Phpactor
-    " Plug 'phpactor/phpactor', {'for': 'php', 'tag': '*', 'do': 'composer install --no-dev -o'}
-
     " Sneak
     Plug 'justinmk/vim-sneak'
 
     " Startify for funs
     Plug 'mhinz/vim-startify'
 
-    " PHP refactoring plugin
-    " Plug 'adoy/vim-php-refactoring-toolbox'
-
     " Track the engine.
     Plug 'SirVer/ultisnips'
-    " Plug 'quangnguyen30192/cmp-nvim-ultisnips'
 
     " Snippets are separated from the engine. Add this if you want them:
     Plug 'honza/vim-snippets'
@@ -98,9 +85,6 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " zen mode
     Plug 'junegunn/goyo.vim'
 
-    " phpcsfixer
-    " Plug 'stephpy/vim-php-cs-fixer'
-
     " Git integration
     Plug 'mhinz/vim-signify'
     Plug 'tpope/vim-fugitive'
@@ -116,6 +100,22 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Plugin to add more text objects
     Plug 'wellle/targets.vim'
 
+    """""""""""""""" Ruby/rails related plugins """"""""""""""""""
+
+    " ale for ruby & standardrb
+    Plug 'dense-analysis/ale'
+
+
+    """""""""""""""" PHP-related plugins """"""""""""""""
+
+    " phpcsfixer
+    " Plug 'stephpy/vim-php-cs-fixer'
+
+    " PHP refactoring plugin
+    " Plug 'adoy/vim-php-refactoring-toolbox'
+
+    " Phpactor
+    " Plug 'phpactor/phpactor', {'for': 'php', 'tag': '*', 'do': 'composer install --no-dev -o'}
 
 
 call plug#end()

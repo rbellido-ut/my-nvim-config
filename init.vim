@@ -15,13 +15,13 @@ source $HOME/.config/nvim/themes/airline.vim
 source $HOME/.config/nvim/keys/mappings.vim
 source $HOME/.config/nvim/keys/which-key.vim
 
-" Include all lua config
-for f in split(glob($HOME . "/.config/nvim/lua/*.lua"), '\n')
+" Include all plugin config
+for f in split(glob($HOME . "/.config/nvim/plug-config/*.vim"), '\n')
   exe 'source' f
 endfor
 
-" Include all plugin config
-for f in split(glob($HOME . "/.config/nvim/plug-config/*.vim"), '\n')
+" Include all lua config
+for f in split(glob($HOME . "/.config/nvim/lua/*.lua"), '\n')
   exe 'source' f
 endfor
 

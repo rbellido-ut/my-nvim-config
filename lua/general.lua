@@ -1,10 +1,11 @@
+
 require("mason").setup()
 require("mason-lspconfig").setup({
   ensure_installed = { "solargraph" }
 })
 
-local coq = require "coq"
-local nvim_lsp = require('lspconfig')
+local coq = require("coq")
+local nvim_lsp = require("lspconfig")
 
 -- Use an on_attach function to only map the following keys
 -- after the language server attaches to the current buffer
@@ -12,7 +13,7 @@ local on_attach = function(client, bufnr)
 local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
 local function buf_set_option(...) vim.api.nvim_buf_set_option(bufnr, ...) end
 
-  --Enable completion triggered by <c-x><c-o>
+--Enable completion triggered by (c-x)<c-o>
 -- buf_set_option('omnifunc', 'v:lua.vim.lsp.omnifunc')
 
 -- Mappings.
@@ -36,7 +37,6 @@ local opts = { noremap=true, silent=true }
   -- buf_set_keymap('n', ']d', '<cmd>lua vim.lsp.diagnostic.goto_next()<CR>', opts)
   -- buf_set_keymap('n', '<space>q', '<cmd>lua vim.lsp.diagnostic.set_loclist()<CR>', opts)
   buf_set_keymap("n", "<space>f", "<cmd>lua vim.lsp.buf.formatting()<CR>", opts)
-
 end
 
 -- Use a loop to conveniently call 'setup' on multiple servers and
