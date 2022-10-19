@@ -18,6 +18,10 @@ source $HOME/.config/nvim/keys/which-key.vim
 
 " Include all plugin config
 for f in split(glob($HOME . "/.config/nvim/plug-config/*.vim"), '\n')
+  if f =~ 'nerdtree'
+    continue
+  endif
+
   exe 'source' f
 endfor
 
