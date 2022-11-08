@@ -13,7 +13,9 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Auto pairs for '(' '[' '{'
     Plug 'jiangmiao/auto-pairs'
 
-    Plug 'ms-jpq/chadtree', {'branch': 'chad', 'do': 'python3 -m chadtree deps'}
+    " File explorers
+    " Plug 'ms-jpq/chadtree', {'branch': 'chad', 'do': 'python3 -m chadtree deps'}
+    Plug 'nvim-tree/nvim-tree.lua'
 
     " THEMES
     Plug 'joshdick/onedark.vim'
@@ -75,7 +77,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'honza/vim-snippets'
 
     " Tagbar for viewing class class outline
-    Plug 'preservim/tagbar'
+    " Plug 'preservim/tagbar'
 
     " kill buffer not window
     Plug 'qpkorr/vim-bufkill'

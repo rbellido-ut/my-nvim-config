@@ -1,4 +1,3 @@
-
 require("mason").setup()
 require("mason-lspconfig").setup({
   ensure_installed = { "solargraph" }
@@ -51,4 +50,18 @@ for _, lsp in ipairs(servers) do
       max_files = 0,
     })
   )
+end
+
+-- Disable some built-in plugins
+local disabled_built_ins = {
+	"netrwPlugin",
+	"tohtml",
+	"man",
+	"tarPlugin",
+	"zipPlugin",
+	"gzip"
+}
+
+for i = 1, table.maxn(disabled_built_ins) do
+	vim.g["loaded_" .. disabled_built_ins[i]] = 1
 end

@@ -8,9 +8,6 @@ nnoremap <M-k>    :resize +2<CR>
 nnoremap <M-h>    :vertical resize -2<CR>
 nnoremap <M-l>    :vertical resize +2<CR>
 
-" CHADTree
-nnoremap <Leader>e <cmd>CHADopen<CR>
-
 " I hate escape more than anything else
 inoremap jj <Esc>
 inoremap jj <Esc>
@@ -65,21 +62,6 @@ let g:fzf_history_dir = '~/.local/share/fzf-history'
 
 " FZF searching
 map <C-f> :Files<CR>
-map <leader>b :Buffers<CR>
-nnoremap <leader>c :Commands<CR>
-nnoremap <leader>g :Rg<CR>
-nnoremap <leader>gg :GGrep<CR>
-nnoremap <leader>gag :Ag<CR>
-nnoremap <leader>gbl :BLines<CR>
-nnoremap <leader>t :Tags<CR>
-nnoremap <leader>m :Marks<CR>
-
-nnoremap <leader>h :nohlsearch<CR>
-nnoremap <leader>f <cmd>:ALEFix<CR>
-
-" Close the current buffer and move to the previous one
-" This replicates the idea of closing a tab
-nnoremap <leader>bq :<c-u>bp <bar> bd #<cr>
 
 let g:fzf_tags_command = 'ctags -R'
 " Border color

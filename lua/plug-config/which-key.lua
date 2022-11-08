@@ -1,5 +1,6 @@
-lua << EOF
-require("which-key").setup {
+local wk = require("which-key")
+
+wk.setup {
   plugins = {
     marks = true, -- shows a list of your marks on ' and `
     registers = true, -- shows your registers on " in NORMAL or <C-r> in INSERT mode
@@ -62,6 +63,5 @@ require("which-key").setup {
     -- most people should not need to change this
     i = { "j", "k" },
     v = { "j", "k" },
-  },
+  }
 }
-EOF
