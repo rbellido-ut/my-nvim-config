@@ -9,18 +9,20 @@ local nmaps = {
   ["<leader>h"] = { "<cmd>nohlsearch<cr>", "Toggle search highlights" },
   ["<leader>f"] = { "<cmd>ALEFix<cr>", "ALE fix formatting issues" },
   ["<leader>ag"] = { "<cmd>Ag<cr>", "Silver Searcher" },
-  b = {
-    name = "Buffer",
-    q = { "<c-u>bp <bar> bd #<cr>", "Close current buffer and move to previous one" },
-    l = { "<cmd>BLines<cr>", "Search by line in buffer" }
-  },
-  g = {
-    g = { "<cmd>GGrep<cr>", "Git Grep" },
-    j = { "<plug>(signify-next-hunk)" },
-    k = { "<plug>(signify-prev-hunk)" },
-    J = { "9999<leader>gj" },
-    K = { "9999<leader>gk" },
-  },
+  ["<leader>"] = {
+    b = {
+      name = "Buffer",
+      q = { "<c-u>bp <bar> bd #<cr>", "Close current buffer and move to previous one" },
+      l = { "<cmd>BLines<cr>", "Search by line in buffer" }
+    },
+    g = {
+      g = { "<cmd>GGrep<cr>", "Git Grep" },
+      j = { "<plug>(signify-next-hunk)" },
+      k = { "<plug>(signify-prev-hunk)" },
+      J = { "9999<leader>gj" },
+      K = { "9999<leader>gk" },
+    },
+  }
 }
 
 local vmaps = {
