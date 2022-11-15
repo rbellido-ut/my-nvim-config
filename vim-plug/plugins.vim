@@ -44,9 +44,6 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'vim-airline/vim-airline'
     Plug 'vim-airline/vim-airline-themes'
     
-    " Ranger integration w/ nvim
-    Plug 'kevinhwang91/rnvimr', {'do': 'make sync'}
-
     " Which key plugin
     Plug 'folke/which-key.nvim'
 
