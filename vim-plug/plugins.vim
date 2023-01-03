@@ -25,6 +25,9 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'EdenEast/nightfox.nvim'
     Plug 'sainnhe/everforest'
     Plug 'ajmwagar/vim-deus'
+    Plug 'mhartington/oceanic-next'
+    Plug 'rebelot/kanagawa.nvim'
+    Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
     " End THEMES
 
     " Native LSP
