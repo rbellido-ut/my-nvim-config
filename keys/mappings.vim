@@ -44,10 +44,6 @@ nnoremap <C-l> <C-w>l
 nnoremap <Leader>o o<Esc>^Da
 nnoremap <Leader>O O<Esc>^Da
 
-" vim commentary
-nnoremap <space>/ :Commentary<CR>
-vnoremap <space>/ :Commentary<CR>
-
 " fzf
 let g:fzf_action = {
   \ 'ctrl-t': 'tab split',

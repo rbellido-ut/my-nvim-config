@@ -23,9 +23,4 @@ for f in split(glob($HOME . "/.config/nvim/plug-config/*.vim"), '\n')
   exe 'source' f
 endfor
 
-" Include all lua config
-for f in split(glob($HOME . "/.config/nvim/lua/**/*.lua"), '\n')
-  exe 'source' f
-endfor
-
-lua require'plug-colorizer'
+lua require 'general'
