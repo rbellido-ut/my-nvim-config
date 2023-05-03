@@ -134,6 +134,5 @@ require("nvim-tree").setup({
   filters = {
     dotfiles = false,
   },
+  on_attach = on_attach,
 })
-
-vim.keymap.set('n', '<leader>e', '<cmd>NvimTreeFindFileToggle<cr>')
