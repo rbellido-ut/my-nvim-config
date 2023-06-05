@@ -28,6 +28,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'mhartington/oceanic-next'
     Plug 'rebelot/kanagawa.nvim'
     Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
+    Plug 'ellisonleao/gruvbox.nvim'
     " End THEMES
 
     " Native LSP
