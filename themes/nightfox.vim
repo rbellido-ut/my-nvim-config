@@ -1,9 +1,9 @@
 " Light
-colorscheme dayfox
+" colorscheme dayfox
 " colorscheme dawnfox
 
 " Dark
-" colorscheme nightfox
+colorscheme nightfox
 " colorscheme terafox
 " colorscheme duskfox
 " colorscheme nordfox

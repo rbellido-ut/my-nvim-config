@@ -4,10 +4,10 @@ if has('termguicolors')
 endif
 
 " Dark version
-" set background=dark
+set background=dark
 
 " Light version
-set background=light
+" set background=light
 
 " Set contrast: hard, medium, soft
 let g:everforest_background = 'hard'
