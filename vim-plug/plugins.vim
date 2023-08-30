@@ -45,8 +45,6 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " lua & third party sources -- See https://github.com/ms-jpq/coq.thirdparty
     " Need to **configure separately**
     Plug 'ms-jpq/coq.thirdparty', {'branch': '3p'}
-
-    Plug 'rmagatti/goto-preview'
     
     " Airline status
     Plug 'vim-airline/vim-airline'
