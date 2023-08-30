@@ -3,10 +3,10 @@
 " colorscheme dawnfox
 
 " Dark
-colorscheme nightfox
+" colorscheme nightfox
 " colorscheme terafox
 " colorscheme duskfox
-" colorscheme nordfox
+colorscheme nordfox
 " colorscheme carbonfox
 
 let g:airline_theme = 'atomic'

@@ -17,6 +17,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Plug 'ms-jpq/chadtree', {'branch': 'chad', 'do': 'python3 -m chadtree deps'}
     Plug 'nvim-tree/nvim-tree.lua'
 
+    Plug 'sindrets/winshift.nvim'
+
     " THEMES
     Plug 'joshdick/onedark.vim'
     Plug 'chriskempson/base16-vim'
@@ -43,6 +45,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " lua & third party sources -- See https://github.com/ms-jpq/coq.thirdparty
     " Need to **configure separately**
     Plug 'ms-jpq/coq.thirdparty', {'branch': '3p'}
+
+    Plug 'rmagatti/goto-preview'
     
     " Airline status
     Plug 'vim-airline/vim-airline'
@@ -121,5 +125,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Phpactor
     " Plug 'phpactor/phpactor', {'for': 'php', 'tag': '*', 'do': 'composer install --no-dev -o'}
 
+    " For Lua/Neovim development
+    Plug 'nvim-lua/plenary.nvim'
 
 call plug#end()
