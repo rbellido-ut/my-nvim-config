@@ -1,6 +1,7 @@
 require("plug-colorizer")
 require("plug-config")
 require("lsp-config")
+require("utils")
 
 -- Disable some built-in plugins
 local disabled_built_ins = {
