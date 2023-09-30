@@ -2,7 +2,7 @@ require("plug-colorizer")
 require("plug-config")
 require("mason").setup()
 require("mason-lspconfig").setup({
-  ensure_installed = { "solargraph" }
+  ensure_installed = { "solargraph", "gopls" }
 })
 
 local coq = require("coq")
@@ -42,7 +42,7 @@ end
 
 -- Use a loop to conveniently call 'setup' on multiple servers and
 -- map buffer local keybindings when the language server attaches
-local servers = { "solargraph" }
+local servers = { "solargraph", "gopls" }
 for _, lsp in ipairs(servers) do
   nvim_lsp[lsp].setup(coq.lsp_ensure_capabilities({
       on_attach = on_attach,
