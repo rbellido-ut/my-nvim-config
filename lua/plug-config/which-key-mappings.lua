@@ -8,7 +8,6 @@ local nmaps = {
   ["<leader>t"] = { "<cmd>Tags<cr>", "Tags" },
   ["<leader>m"] = { "<cmd>Marks<cr>", "Marks" },
   ["<leader>h"] = { "<cmd>nohlsearch<cr>", "Toggle search highlights" },
-  ["<leader>f"] = { "<cmd>ALEFix<cr>", "ALE fix formatting issues" },
   ["<leader>ag"] = { "<cmd>Ag<cr>", "Silver Searcher" },
   ["<leader>/"] = { "<cmd>Commentary<cr>", "Comment/uncomment line" },
   ["<leader>"] = {
