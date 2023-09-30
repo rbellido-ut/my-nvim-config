@@ -1,5 +1,5 @@
 require("mason").setup()
-local servers = { "solargraph", "gopls" }
+local servers = { "solargraph", "gopls", "lua_ls" }
 
 require("mason-lspconfig").setup({
   ensure_installed = servers
@@ -43,19 +43,6 @@ local on_attach = function(client, bufnr)
   buf_set_keymap("n", "<space>f", "<cmd>lua vim.lsp.buf.format { async=true }<CR>", opts)
 end
 
--- Extra gopls setup
-nvim_lsp.gopls.setup {
-  settings = {
-    gopls = {
-      completeUnignored = true,
-      usePlaceholders = true,
-      analyses = {
-        unusedparams = true,
-      }
-    },
-  },
-}
-
 -- Use a loop to conveniently call 'setup' on multiple servers and
 -- map buffer local keybindings when the language server attaches
 for _, lsp in ipairs(servers) do
@@ -70,3 +57,15 @@ for _, lsp in ipairs(servers) do
   )
 end
 
+-- Custom Go Lang LS (gopls) setup
+nvim_lsp.gopls.setup {
+  settings = {
+    gopls = {
+      completeUnignored = true,
+      usePlaceholders = true,
+      analyses = {
+        unusedparams = true,
+      }
+    },
+  },
+}
