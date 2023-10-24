@@ -106,6 +106,10 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Plugin to add more text objects
     Plug 'wellle/targets.vim'
 
+    " GH Co-pilot baby
+    Plug 'github/copilot.vim'
+    " Plug 'zbirenbaum/copilot.lua' 
+
     """""""""""""""" Ruby/rails related plugins """"""""""""""""""
 
     " ale for ruby & standardrb
